@@ -1,0 +1,6 @@
+{
+  "rmse": 5.0688,
+  "train_rows": 41908,
+  "test_rows": 10478,
+  "model_version": 3
+}
