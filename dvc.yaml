@@ -1,0 +1,17 @@
+stages:
+
+  train_model:
+    cmd: uv run python -m src.train
+    deps:
+      - src/train.py
+      - src/preprocess.py
+      - data/green_tripdata_2024-01.parquet
+      - uv.lock
+
+    outs:
+      - models/model.joblib
+      
+
+    metrics:
+      - reports/train_metrics.json:
+            cache: false
